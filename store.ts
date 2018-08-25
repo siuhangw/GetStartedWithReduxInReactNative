@@ -1,13 +1,16 @@
 import { createStore, Action } from "redux";
 import { combineReducers } from "redux";
-import { MessageState, messageReducer } from "./reducers/reducer";
+import { GreetState, greetReducer } from "./reducers/greetReducer";
+import { AuthState, authReducer } from "./reducers/authReducer";
 
 export interface RootState {
-  word: MessageState;
+  word: GreetState;
+  auth: AuthState;
 }
 
 export const rootReducer = combineReducers<RootState>({
-  word: messageReducer
+  word: greetReducer,
+  auth: authReducer
 });
 
 export const store = createStore<RootState, Action, {}, {}>(rootReducer);

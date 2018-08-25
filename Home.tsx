@@ -9,7 +9,7 @@
 import * as React from "react";
 import { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
-import Greet from "./components/greet";
+import Auth from "./components/auth";
 import { store } from "./store";
 import { Provider } from "react-redux";
 
@@ -21,15 +21,15 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class App extends Component<Props> {
+export default class Home extends Component<Props> {
   render() {
     return (
       <Provider store={store}>
         <View style={styles.container}>
-          <Text style={styles.welcome}>Welcome to React Native App!</Text>
+          <Text style={styles.welcome}>Welcome to React Native Home!</Text>
           <Text style={styles.instructions}>To get started, edit App.js</Text>
           <Text style={styles.instructions}>{instructions}</Text>
-          <Greet />
+          <Auth />
         </View>
       </Provider>
     );

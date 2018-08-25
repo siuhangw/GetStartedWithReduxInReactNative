@@ -1,6 +1,10 @@
-import { messageAction, PRINT_HELLOWORLD, PRINT_HEY } from "../actions/action";
+import {
+  greetAction,
+  PRINT_HELLOWORLD,
+  PRINT_HEY
+} from "../actions/greetAction";
 
-export interface MessageState {
+export interface GreetState {
   word: string;
 }
 
@@ -8,9 +12,9 @@ const initialState = {
   word: "Press me the print greet messgae ~ :D"
 };
 
-export function messageReducer(
-  state: MessageState = initialState,
-  action: messageAction
+export function greetReducer(
+  state: GreetState = initialState,
+  action: greetAction
 ) {
   switch (action.type) {
     case PRINT_HELLOWORLD:

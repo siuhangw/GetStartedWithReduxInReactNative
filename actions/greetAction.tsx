@@ -13,7 +13,7 @@ export interface printHey {
   type: PRINT_HEY;
 }
 
-export type messageAction = printHelloWorld | printHey;
+export type greetAction = printHelloWorld | printHey;
 
 // function findPrintHelloWorld() {
 //   return {

@@ -3,7 +3,11 @@ import { View, TouchableHighlight, Text, StyleSheet } from "react-native";
 
 import { RootState } from "../store";
 
-import { PRINT_HELLOWORLD, PRINT_HEY, messageAction } from "../actions/action";
+import {
+  PRINT_HELLOWORLD,
+  PRINT_HEY,
+  messageAction
+} from "../actions/greetAction";
 import { Dispatch } from "redux";
 
 import { connect } from "react-redux";
