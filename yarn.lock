@@ -496,6 +496,12 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-native-navigation@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/react-native-navigation/-/react-native-navigation-2.0.0.tgz#9a2353be6b31a864336e8fef4e3be305c3ee1422"
+  dependencies:
+    react-native-navigation "*"
+
 "@types/react-native@^0.56.12":
   version "0.56.12"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.56.12.tgz#1d09acaa632b6d2199d9bd55a2846e8e4f027868"
@@ -3287,7 +3293,7 @@ lodash.throttle@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
 
-lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
+lodash@4.x.x, lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
@@ -4170,6 +4176,12 @@ react-devtools-core@^3.2.2:
 react-is@^16.4.1:
   version "16.4.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.4.2.tgz#84891b56c2b6d9efdee577cc83501dfc5ecead88"
+
+react-native-navigation@*, react-native-navigation@^1.1.483:
+  version "1.1.483"
+  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-1.1.483.tgz#e97c8a80bb7c784383e99c94a4f8df0622c4627d"
+  dependencies:
+    lodash "4.x.x"
 
 react-native-typescript-transformer@^1.2.10:
   version "1.2.10"
