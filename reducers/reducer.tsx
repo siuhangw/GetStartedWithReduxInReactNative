@@ -14,7 +14,9 @@ export function messageReducer(
 ) {
   switch (action.type) {
     case PRINT_HELLOWORLD:
-      return { word: "new hello world" };
+      return {
+        word: "new hello world"
+      };
     case PRINT_HEY:
       return { word: "new hey" };
     default:

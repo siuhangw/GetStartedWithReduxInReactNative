@@ -28,17 +28,17 @@ export type messageAction = printHelloWorld | printHey;
 // }
 
 export function printHelloWorld() {
+  console.log("Hello World");
   return {
     type: printHelloWorld
   };
-  console.log("Hello World");
 }
 
 export function printHey() {
+  console.log("Hey");
   return {
     type: printHey
   };
-  console.log("Hey");
 }
 
 // export function printMessages(userInput: string) {

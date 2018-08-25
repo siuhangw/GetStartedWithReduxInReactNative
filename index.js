@@ -8,9 +8,21 @@ import App from "./App";
 // AppRegistry.registerComponent(appName, () => App);
 
 import { Navigation } from "react-native-navigation";
+import { Provider } from "react-redux";
+import store from "./store";
 
-Navigation.registerComponent("example.FirstTabScreen", () => App);
-Navigation.registerComponent("example.SecondTabScreen", () => App);
+Navigation.registerComponent(
+  "example.FirstTabScreen",
+  () => App,
+  store,
+  Provider
+);
+Navigation.registerComponent(
+  "example.SecondTabScreen",
+  () => App,
+  store,
+  Provider
+);
 
 Navigation.startTabBasedApp({
   tabs: [

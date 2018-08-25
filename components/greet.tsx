@@ -1,10 +1,12 @@
 import * as React from "react";
-import { View, TouchableHighlight, Text } from "react-native";
-import { connect } from "react-redux";
-// import { printHelloWorld, printHey, messageAction } from "../actions/action";
+import { View, TouchableHighlight, Text, StyleSheet } from "react-native";
+
+import { RootState } from "../store";
+
 import { PRINT_HELLOWORLD, PRINT_HEY, messageAction } from "../actions/action";
 import { Dispatch } from "redux";
-import { RootState } from "../store";
+
+import { connect } from "react-redux";
 
 interface IGreetProps {
   word: string;
@@ -16,30 +18,25 @@ interface IGreetStates {
   // userInput: "";
 }
 
+let wordA = "Hello Word";
+let wordB = "Hey";
+
 class PureGreet extends React.Component<IGreetProps, IGreetStates> {
   render() {
     return (
-      <View>
-        <Text>{this.props.word}</Text>
+      <View style={styles.container}>
+        <Text style={styles.item}>{this.props.word}</Text>
         {/* <TouchableHighlight onPress={this.onPrintHelloWorld}> */}
         <TouchableHighlight onPress={this.props.printHelloWorld}>
-          <Text>Hello World</Text>
+          <Text style={styles.button}>Hello World</Text>
         </TouchableHighlight>
         {/* <TouchableHighlight onPress={this.onPrintHey}> */}
         <TouchableHighlight onPress={this.props.printHey}>
-          <Text>Hey</Text>
+          <Text style={styles.button}>Hey</Text>
         </TouchableHighlight>
       </View>
     );
   }
-
-  // onPrintHelloWorld = () => {
-  //   printHelloWorld();
-  // };
-
-  // onPrintHey = () => {
-  //   printHey();
-  // };
 }
 
 const mapStateToProps = (state: RootState) => {
@@ -53,7 +50,7 @@ const mapDispatchToProps = (dispatch: Dispatch<messageAction>) => {
     printHelloWorld: () =>
       dispatch({
         type: PRINT_HELLOWORLD,
-        word: "Hello World"
+        word: "Hello Word"
       }),
 
     printHey: () =>
@@ -68,3 +65,22 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(PureGreet);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF"
+  },
+  item: {
+    fontSize: 20,
+    textAlign: "center",
+    margin: 10
+  },
+  button: {
+    fontSize: 20,
+    textAlign: "center",
+    margin: 10
+  }
+});
