@@ -3,7 +3,11 @@ import { View, TouchableHighlight, Text, StyleSheet } from "react-native";
 
 import { RootState } from "../store";
 
-import { LOGIN, authAction } from "../actions/authAction";
+import {
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE,
+  authAction
+} from "../actions/authAction";
 import { Dispatch } from "redux";
 
 import { connect } from "react-redux";
@@ -42,7 +46,7 @@ const mapDispatchToProps = (dispatch: Dispatch<authAction>) => {
   return {
     login: () =>
       dispatch({
-        type: LOGIN
+        type: LOGIN_SUCCESS
       })
   };
 };

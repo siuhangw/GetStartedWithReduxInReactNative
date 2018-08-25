@@ -1,4 +1,8 @@
-import { loginAction, LOGIN } from "../actions/authAction";
+import {
+  authAction,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE
+} from "../actions/authAction";
 
 export interface AuthState {
   auth: string;
@@ -10,10 +14,14 @@ const initialState = {
 
 export function authReducer(
   state: AuthState = initialState,
-  action: loginAction
+  action: authAction
 ) {
   switch (action.type) {
-    case LOGIN:
+    case LOGIN_SUCCESS:
+      return {
+        auth: "new hello world"
+      };
+    case LOGIN_FAILURE:
       return {
         auth: "new hello world"
       };
