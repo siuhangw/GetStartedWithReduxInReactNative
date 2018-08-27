@@ -5,11 +5,11 @@ import {
 } from "../actions/greetAction";
 
 export interface GreetState {
-  word: string;
+  msg: string;
 }
 
 const initialState = {
-  word: "Press me the print greet messgae ~ :D"
+  msg: "Press me the print greet messgae ~ :D"
 };
 
 export function greetReducer(
@@ -19,10 +19,10 @@ export function greetReducer(
   switch (action.type) {
     case PRINT_HELLOWORLD:
       return {
-        word: "new hello world"
+        msg: "new hello world"
       };
     case PRINT_HEY:
-      return { word: "new hey" };
+      return { msg: "new hey" };
     default:
       return state;
   }

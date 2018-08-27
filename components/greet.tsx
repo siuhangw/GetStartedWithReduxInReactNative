@@ -12,8 +12,11 @@ import { Dispatch } from "redux";
 
 import { connect } from "react-redux";
 
+let wordA = "Hello Word";
+let wordB = "Hey";
+
 interface IGreetProps {
-  word: string;
+  message: string;
   printHelloWorld: () => void;
   printHey: () => void;
 }
@@ -21,9 +24,6 @@ interface IGreetProps {
 interface IGreetStates {
   // userInput: "";
 }
-
-let wordA = "Hello Word";
-let wordB = "Hey";
 
 class PureGreet extends React.Component<IGreetProps, IGreetStates> {
   render() {
@@ -45,7 +45,7 @@ class PureGreet extends React.Component<IGreetProps, IGreetStates> {
 
 const mapStateToProps = (state: RootState) => {
   return {
-    word: state.word.word
+    message: state.greetMsg.msg
   };
 };
 
@@ -54,13 +54,13 @@ const mapDispatchToProps = (dispatch: Dispatch<greetAction>) => {
     printHelloWorld: () =>
       dispatch({
         type: PRINT_HELLOWORLD,
-        word: "Hello Word"
+        message: "Hello Word"
       }),
 
     printHey: () =>
       dispatch({
         type: PRINT_HEY,
-        word: "Hey"
+        message: "Hey"
       })
   };
 };
