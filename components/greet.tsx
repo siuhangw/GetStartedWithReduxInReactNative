@@ -6,7 +6,7 @@ import { RootState } from "../store";
 import {
   PRINT_HELLOWORLD,
   PRINT_HEY,
-  messageAction
+  greetAction
 } from "../actions/greetAction";
 import { Dispatch } from "redux";
 
@@ -49,7 +49,7 @@ const mapStateToProps = (state: RootState) => {
   };
 };
 
-const mapDispatchToProps = (dispatch: Dispatch<messageAction>) => {
+const mapDispatchToProps = (dispatch: Dispatch<greetAction>) => {
   return {
     printHelloWorld: () =>
       dispatch({
